@@ -68,4 +68,30 @@ public class UserController {
         return Result.success(userService.findUserById(id));
     }
 
+    /**
+     * 条件查询
+     * @param id1
+     * @param id2
+     * @return
+     */
+    @PostMapping("/users")
+    @ResponseBody
+    public Result findUsersByIdRange(@RequestParam int id1,
+                                     @RequestParam int id2) {
+        return Result.success(userService.findUserByIdRange(id1, id2));
+    }
+
+    /**
+     * 倒序分页查询
+     * @param page
+     * @param size
+     * @return
+     */
+    @PostMapping("/users/users")
+    @ResponseBody
+    public Result findUsers(@RequestParam int page,
+                            @RequestParam int size) {
+        logger.error("page=:"+ page +"  size=:" + size);
+        return Result.success(userService.findUsersByPage(page, size));
+    }
 }
