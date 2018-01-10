@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springmvc_hiberate:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="springmvc_hiberate-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="springmvc_hiberate:war exploded" />
+    </root>
+  </artifact>
+</component>
