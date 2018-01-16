@@ -22,5 +22,8 @@ public class UserRepositoryTest {
         userRepository.findByIdRange(1, 4);
     }
 
-
+    @Test
+    public void findNamesById() {
+        userRepository.findNamesById(1, 4);
+    }
 }

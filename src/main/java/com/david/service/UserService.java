@@ -31,6 +31,9 @@ public interface UserService {
      */
     List<User> findUserByIdRange(int id1,int id2);
 
+
+    List<User> findNamesById(int id1,int id2);
+
     /**
      * 插入一条数据
      * @param user
@@ -38,5 +41,11 @@ public interface UserService {
      */
     void addUser(User user);
 
+    /**
+     * 分页查询
+     * @param page
+     * @param size
+     * @return
+     */
     List<User> findUsersByPage(int page, int size);
 }

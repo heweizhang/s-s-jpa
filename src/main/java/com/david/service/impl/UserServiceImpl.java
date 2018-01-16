@@ -4,7 +4,6 @@ import com.david.entity.User;
 import com.david.reponsitory.UserRepository;
 import com.david.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -33,6 +32,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> findUserByIdRange(int id1, int id2) {
         return userRepository.findByIdRange(id1, id2);
+    }
+
+    @Override
+    public List<User> findNamesById(int id1, int id2) {
+        return userRepository.findNamesById(id1, id2);
     }
 
     @Override

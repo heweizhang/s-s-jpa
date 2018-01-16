@@ -10,9 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Map;
-
 /**
+ *
  * Created by zhanghewei on 2018/1/9.
  */
 @Controller
@@ -49,7 +48,6 @@ public class UserController {
     @ResponseBody
     public Result addUser(@RequestParam String name,
                           @RequestParam int age) {
-        logger.error("ageaaaaaa:" + age);
         try {
             User user = new User();
             user.setName(name);
