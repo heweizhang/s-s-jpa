@@ -59,4 +59,7 @@
             return Result.success(paramValiate);
         }
     ```    
+    - 教程  
+      `SpringMVC集成Hibernate Validator进行注解式的参数校验——让代码更少、更加专注于业务逻辑`:http://blog.csdn.net/nmgrd/article/details/57088192  
+      `Spring MVC 通过切面，实现超灵活的注解式数据校验`:https://diamondfsd.com/article/78fa12cd-b530-4a90-b438-13d5a0c4e26c
 
