@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -49,6 +50,21 @@ public class UserServiceImpl implements UserService {
         Sort sort = new Sort(Sort.Direction.DESC, "id");//id倒序
         Pageable pageable = new PageRequest(page, size, sort);
         return userRepository.findAll(pageable).getContent();
+    }
+
+    @Override
+    @Transactional
+    public void addUser2(User user) {
+        userRepository.save(user);
+        try {
+            String s = null;
+            if(s.equals("")){
+
+            }
+        } catch (RuntimeException e) {
+            throw e;
+        }
+
     }
 
 }

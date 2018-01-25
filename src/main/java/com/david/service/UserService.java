@@ -40,6 +40,7 @@ public interface UserService {
      * @return
      */
     void addUser(User user);
+    void addUser2(User user);
 
     /**
      * 分页查询
@@ -48,4 +49,6 @@ public interface UserService {
      * @return
      */
     List<User> findUsersByPage(int page, int size);
+
+
 }

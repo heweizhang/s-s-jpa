@@ -1,6 +1,7 @@
 package com.david.service.impl;
 
 
+import base.BaseUnitTest;
 import com.david.controller.UserController;
 import com.david.entity.User;
 import com.david.service.UserService;
@@ -15,9 +16,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by zhanghewei on 2018/1/9.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/spring.xml"})
-public class UserServiceImplTest {
+
+public class UserServiceImplTest extends BaseUnitTest {
 
     @Autowired
     private UserService userService;
@@ -48,6 +48,13 @@ public class UserServiceImplTest {
         logger.info(" This is info!!!");
         logger.warn(" This is warn!!!");
         logger.error(" This is error!!!");
+    }
+    @Test
+    public void addUser2(){
+        User user = new User();
+        user.setName("jack");
+        user.setAge(189);
+        userService.addUser2(user);
     }
 
 }

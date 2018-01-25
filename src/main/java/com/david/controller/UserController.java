@@ -7,11 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- *
  * Created by zhanghewei on 2018/1/9.
  */
 @Controller
@@ -68,6 +68,7 @@ public class UserController {
 
     /**
      * 条件查询
+     *
      * @param id1
      * @param id2
      * @return
@@ -81,6 +82,7 @@ public class UserController {
 
     /**
      * 倒序分页查询
+     *
      * @param page
      * @param size
      * @return
@@ -89,7 +91,9 @@ public class UserController {
     @ResponseBody
     public Result findUsers(@RequestParam int page,
                             @RequestParam int size) {
-        logger.error("page=:"+ page +"  size=:" + size);
+        logger.error("page=:" + page + "  size=:" + size);
         return Result.success(userService.findUsersByPage(page, size));
     }
+
+
 }
